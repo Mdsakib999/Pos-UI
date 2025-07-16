@@ -33,7 +33,7 @@ const TriSection = () => {
           }`}
         >
           <div className="flex-1">
-            <p className="font-serif inline-block text-orange-600 text-sm sm:text-base mb-3">
+            <p className="inline-block text-orange-600 text-sm sm:text-base mb-3">
               {section.title}
             </p>
             <h1 className="text-2xl sm:text-5xl font-bold leading-tight mb-3 max-w-xl">

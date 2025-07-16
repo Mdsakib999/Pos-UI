@@ -11,7 +11,7 @@ const PriceCard = ({
   return (
     <div
       className={`flex flex-col justify-between rounded-2xl 
-      ${cardColor} font-serif 
+      ${cardColor} 
       p-6 sm:p-8 md:p-10 
       min-h-[500px] w-full max-w-xs sm:max-w-md mx-auto mb-16`}
     >
