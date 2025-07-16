@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaSearch, FaPlus, FaMinus } from "react-icons/fa";
 
 export const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(0); // First question open by default
+  const [openIndex, setOpenIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState("General");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -130,7 +130,7 @@ export const FAQ = () => {
             />
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 lg:px-6 py-3 lg:py-4 rounded-full transition-colors duration-200 flex items-center gap-2 whitespace-nowrap">
               <FaSearch className="w-4 h-4" />
-              <span className="hidden sm:inline">Search</span>
+              <span>Search</span>
             </button>
           </div>
         </div>
