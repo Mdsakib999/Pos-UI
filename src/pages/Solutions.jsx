@@ -1,3 +1,11 @@
+import NewsLetter from "../components/solutions/NewsLetter";
+import TriSection from "../components/solutions/TriSection";
+
 export const Solutions = () => {
-  return <div>Solutions</div>;
+  return (
+    <div>
+      <TriSection />
+      <NewsLetter />
+    </div>
+  );
 };

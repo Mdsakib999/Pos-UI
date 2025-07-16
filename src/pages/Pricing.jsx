@@ -1,9 +1,9 @@
-import PriceCard from "../components/PriceCard";
+import PriceCard from "../components/Pricing/PriceCard";
 import { plans } from "../utils/PricePlan";
 
 const Pricing = () => {
   return (
-    <div className="my-10 font-serif">
+    <div className="m-10 font-serif">
       <h1 className="text-center text-xl sm:text-3xl font-bold">
         Choose Your <span className="text-orange-600">Perfect Plan</span>
       </h1>

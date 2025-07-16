@@ -4,6 +4,7 @@ import {
   PiChartLineUpDuotone,
 } from "react-icons/pi";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 const services = [
   {
@@ -45,13 +46,13 @@ export const OurServices = () => {
             <h4 className="text-lg font-semibold mt-4 mb-2">{service.title}</h4>
             <p className="text-sm text-gray-700">{service.description}</p>
             <div className="mt-4">
-              <a
-                href="#"
-                className="text-sm text-black font-medium inline-flex items-center gap-1 group"
+              <Link
+                to="/pricing"
+                className="text-sm text-black hover:text-orange-600 font-medium inline-flex items-center gap-1 group"
               >
                 See Plans
                 <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </div>
           </div>
         ))}
