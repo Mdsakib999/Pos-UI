@@ -1,10 +1,10 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="bg-black text-white px-6 py-12 w-full">
+    <div className="bg-black text-white px-10 md:px-20 py-12 w-full">
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
@@ -19,14 +19,14 @@ const Footer = () => {
           </div>
 
           {/* Email Subscription */}
-          <div className="w-full sm:max-w-md">
-            <div className="flex items-center bg-white rounded-full overflow-hidden shadow-lg">
+          <div className="w-full max-w-xs sm:max-w-md">
+            <div className="flex items-center bg-zinc-800 rounded-full overflow-hidden shadow-lg pl-2 pr-2.5 py-2.5">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-5 py-2 text-gray-700 placeholder-gray-400 focus:outline-none"
+                className="flex-1 min-w-0 px-3 sm:px-5 py-2 text-white placeholder-gray-400 text-sm sm:text-base focus:outline-none"
               />
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full whitespace-nowrap">
+              <button className="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white text-sm sm:text-base px-4 sm:px-6 py-2 rounded-full whitespace-nowrap">
                 Subscribe
               </button>
             </div>
@@ -58,7 +58,11 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-white/60 gap-4">
-          <p>© 2025 SM IT Solution. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()}{" "}
+            <span className="text-orange-400 font-serif">SM IT Solution</span>.
+            All rights reserved.
+          </p>
           <div className="flex gap-3">
             {[FaFacebookF, FaInstagram, FaXTwitter].map((Icon, i) => (
               <div

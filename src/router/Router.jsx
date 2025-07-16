@@ -16,6 +16,10 @@ export const router = createBrowserRouter([
         path: "/pricing",
         Component: Pricing,
       },
+      {
+        path: "/solutions",
+        Component: Home,
+      },
     ],
   },
 ]);
