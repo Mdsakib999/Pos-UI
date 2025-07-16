@@ -101,7 +101,7 @@ export const SystemExplanation = () => {
         {cardItems.map((card, index) => (
           <div
             key={card.id}
-            className={`flex flex-col lg:flex-row items-center gap-8 ${
+            className={`flex flex-col lg:flex-row items-center gap-8 px-5 ${
               index % 2 === 1 ? "lg:flex-row-reverse" : ""
             }`}
           >
@@ -122,12 +122,12 @@ export const SystemExplanation = () => {
             </div>
 
             {/* Image Section */}
-            <div className="flex-1">
+            <div className="flex-1 w-full">
               <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
                 <img
                   src={card.img}
                   alt={card.title}
-                  className="w-full h-64 lg:h-80 object-fit"
+                  className="w-full h-64 lg:h-80 object-fit "
                   onError={(e) => {
                     e.target.style.display = "none";
                     e.target.nextSibling.style.display = "flex";
