@@ -3,7 +3,7 @@ import { CiMail } from "react-icons/ci";
 
 const NewsLetter = () => {
   return (
-    <div className="bg-[#FFEDE6] flex flex-col justify-center items-center mt-20 px-4 py-10 space-y-5">
+    <div className="bg-[#FFEDE6] flex flex-col justify-center items-center mt-20 px-4 py-10 space-y-5 my-10">
       <FaRegNewspaper size={32} color="orange" />
       <h1 className="text-2xl sm:text-3xl text-center font-serif font-semibold">
         Subscribe to Our Newsletter

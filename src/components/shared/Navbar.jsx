@@ -6,9 +6,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full border-b border-gray-200 font-serif bg-white">
-      <div className="flex justify-between items-center px-4 py-4 h-20">
-        <h1 className="text-2xl sm:text-3xl font-extrabold cursor-pointer text-orange-600">
+    <div className="w-full shadow-b shadow-gray-200 border-b border-gray-200 font-serif">
+      <div className="flex justify-between items-center px-4 py-4 h-20 max-w-7xl mx-auto">
+        {/* Logo */}
+        <h1 className="text-2xl sm:text-3xl font-extrabold cursor-pointer">
           POS
         </h1>
         <button
