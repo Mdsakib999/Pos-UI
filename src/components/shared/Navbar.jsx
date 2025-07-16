@@ -12,8 +12,6 @@ const Navbar = () => {
         <h1 className="text-2xl sm:text-3xl font-extrabold cursor-pointer">
           POS
         </h1>
-
-        {/* Hamburger Button - visible on small screens */}
         <button
           className="sm:hidden text-3xl text-orange-600 cursor-pointer transition"
           onClick={() => setIsOpen(!isOpen)}
@@ -21,14 +19,14 @@ const Navbar = () => {
         >
           {isOpen ? <HiX /> : <HiMenu />}
         </button>
-
-        {/* Desktop Menu */}
-        <div className="hidden sm:flex gap-4 items-center">
+        <div className="hidden sm:flex gap-6 items-center">
           <NavLink
             to="/"
             className={({ isActive }) =>
               `cursor-pointer transition duration-300 ${
-                isActive ? "border-b-2 border-orange-600" : ""
+                isActive
+                  ? "text-orange-600 font-bold border-b-2"
+                  : "text-gray-700"
               }`
             }
           >
@@ -38,7 +36,9 @@ const Navbar = () => {
             to="/solutions"
             className={({ isActive }) =>
               `cursor-pointer transition duration-300 ${
-                isActive ? "border-b-2 border-orange-600" : ""
+                isActive
+                  ? "text-orange-600 font-bold border-b-2"
+                  : "text-gray-700"
               }`
             }
           >
@@ -48,27 +48,34 @@ const Navbar = () => {
             to="/pricing"
             className={({ isActive }) =>
               `cursor-pointer transition duration-300 ${
-                isActive ? "border-b-2 border-orange-600" : ""
+                isActive
+                  ? "text-orange-600 font-bold border-b-2"
+                  : "text-gray-700"
               }`
             }
           >
             Pricing
           </NavLink>
         </div>
-        <button className="hidden sm:flex cursor-pointer bg-orange-600 text-white hover:text-orange-600 hover:bg-white hover:border hover:border-orange-600 duration-500 rounded-md px-5 py-2 font-semibold">
+        <button className="hidden sm:flex cursor-pointer bg-orange-600 text-white hover:text-orange-600 hover:bg-white hover:border hover:border-orange-600 duration-300 rounded-md px-5 py-2 font-semibold">
           Get a Demo
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="flex flex-col items-center gap-4 sm:hidden py-4 bg-gray-50">
+        <div className="sm:hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center justify-center gap-6 p-8">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="cursor-pointer absolute top-4 right-4 text-3xl text-orange-600"
+          >
+            <HiX />
+          </button>
           <NavLink
             to="/"
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
-              `cursor-pointer transition duration-300 ${
-                isActive ? "border-b-2 border-orange-600" : ""
+              `text-xl font-medium ${
+                isActive ? "text-orange-600 border-b-2" : "text-gray-800"
               }`
             }
           >
@@ -78,8 +85,8 @@ const Navbar = () => {
             to="/solutions"
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
-              `cursor-pointer transition duration-300 ${
-                isActive ? "border-b-2 border-orange-600" : ""
+              `text-xl font-medium ${
+                isActive ? "text-orange-600 border-b-2" : "text-gray-800"
               }`
             }
           >
@@ -89,14 +96,17 @@ const Navbar = () => {
             to="/pricing"
             onClick={() => setIsOpen(false)}
             className={({ isActive }) =>
-              `cursor-pointer transition duration-300 ${
-                isActive ? "border-b-2 border-orange-600" : ""
+              `text-xl font-medium ${
+                isActive ? "text-orange-600 border-b-2" : "text-gray-800"
               }`
             }
           >
             Pricing
           </NavLink>
-          <button className="cursor-pointer bg-orange-600 text-white hover:text-orange-600 hover:bg-white hover:border hover:border-orange-600 duration-500 rounded-md px-5 py-2 font-semibold">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="bg-orange-600 text-white hover:bg-orange-700 duration-300 rounded-md px-6 py-3 font-semibold text-base mt-4"
+          >
             Get a Demo
           </button>
         </div>
