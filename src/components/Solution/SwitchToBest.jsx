@@ -34,7 +34,7 @@ export const SwitchToBest = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 my-18">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="flex flex-col justify-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Switch to best point of sale system for{" "}
@@ -61,7 +61,7 @@ export const SwitchToBest = () => {
             ))}
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full px-5">
           <img
             src={cafePosimg}
             alt="Cafe POS"
@@ -70,7 +70,7 @@ export const SwitchToBest = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-10 w-full  md:max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mt-10 w-full  md:max-w-6xl mx-auto px-5">
         {cardItems.map((item) => (
           <div
             key={item.id}
