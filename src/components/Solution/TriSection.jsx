@@ -1,6 +1,6 @@
 const TriSection = () => {
   return (
-    <div className="mt-10 space-y-16 px-4">
+    <div className="mt-32 space-y-16 px-4">
       {/* Section 1 */}
       <div className="flex flex-col md:flex-row items-center md:gap-10 gap-6">
         <div className="flex-1">

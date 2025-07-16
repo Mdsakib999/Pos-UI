@@ -1,5 +1,5 @@
-import testomonialImg from "/assets/testomonial.png";
-export const Testomonial = () => {
+import testimonialImg from "/assets/testimonial.png";
+export const Testimonial = () => {
   return (
     <section className="py-16 text-center max-w-5xl mx-auto px-4">
       <p className="text-sm text-orange-500 font-semibold mb-2">Testimonial</p>
@@ -14,7 +14,7 @@ export const Testomonial = () => {
       <div className="flex justify-center">
         <div className="max-w-4xl">
           <img
-            src={testomonialImg}
+            src={testimonialImg}
             alt="Testimonial collage"
             className="w-full h-auto rounded-lg"
             priority

@@ -1,4 +1,5 @@
 import { FaStar } from "react-icons/fa";
+import pcimg from "/assets/PC.png";
 
 export const Hero = () => {
   const companies = [
@@ -63,15 +64,17 @@ export const Hero = () => {
       </p>
 
       {/* CTA button */}
-      <div className="mb-10">
-        <button className="bg-orange-500 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-orange-600 transition duration-300">
-          Start for Now
-        </button>
-      </div>
+      <button className="bg-orange-500 text-white px-8 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-orange-600 transition duration-300">
+        Start for Now
+      </button>
 
       {/* Monitor image */}
-      <div className="mb-10">
-        <img src="" alt="POS SCREEN" className="mx-auto w-full max-w-4xl" />
+      <div className="md:h-[500px] mt-10 md:mt-0 h-[200px]">
+        <img
+          src={pcimg}
+          alt="POS SCREEN"
+          className="mx-auto w-full max-w-4xl h-full object-cover"
+        />
       </div>
 
       {/* Stars and tagline */}
@@ -93,7 +96,7 @@ export const Hero = () => {
       </p>
 
       {/* Companies logos */}
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-6 items-center justify-items-center opacity-70">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-items-center opacity-70">
         {companies.map((company) => (
           <div className="flex items-center gap-2">
             <img
