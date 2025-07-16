@@ -1,3 +1,5 @@
+import NewsLetter from "../components/Solution/NewsLetter";
+import TriSection from "../components/Solution/TriSection";
 import FlowchartDesign from "../components/Solution/FlowChartDesign";
 import { SolutionHero } from "../components/Solution/SolutionHero";
 import { SwitchToBest } from "../components/Solution/SwitchToBest";
@@ -12,6 +14,8 @@ export const Solutions = () => {
         <FlowchartDesign />
       </div>
       <SystemExplanation />
+      <TriSection />
+      <NewsLetter />
     </div>
   );
 };

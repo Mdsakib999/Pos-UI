@@ -5,7 +5,7 @@ import { Hero } from "../components/Home/HomeHero";
 import { HowItWorks } from "../components/Home/HowItWorks";
 import { KeyFeature } from "../components/Home/KeyFeature";
 import { OurServices } from "../components/Home/OurServices";
-import { Testomonial } from "../components/Home/Testomonial";
+import { Testimonial } from "../components/Home/Testimonial";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <KeyFeature />
       <HowItWorks />
       <AboutCompany />
-      <Testomonial />
+      <Testimonial />
       <OurServices />
       <FAQ />
       <GainExcellence />
