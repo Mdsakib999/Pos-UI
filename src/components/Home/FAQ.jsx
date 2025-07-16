@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaSearch, FaPlus, FaMinus } from "react-icons/fa";
 
-export default function FAQ() {
+export const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0); // First question open by default
   const [activeCategory, setActiveCategory] = useState("General");
   const [searchQuery, setSearchQuery] = useState("");
@@ -148,9 +148,9 @@ export default function FAQ() {
                   setActiveCategory(category.name);
                   setOpenIndex(null);
                 }}
-                className={`w-full text-left px-4 py-3 rounded-lg transition-colors duration-200 ${
+                className={`w-full px-2 py-3 rounded-full transition-colors text-center duration-200 ${
                   activeCategory === category.name
-                    ? "bg-orange-100 text-orange-600 font-medium border-2 border-orange-200"
+                    ? " text-orange-600 font-medium border-2 border-orange-500"
                     : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                 }`}
               >
@@ -206,4 +206,4 @@ export default function FAQ() {
       </div>
     </div>
   );
-}
+};
