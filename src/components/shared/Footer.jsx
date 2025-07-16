@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-white/60 gap-4">
+        <div className="flex flex-col-reverse sm:flex-row justify-between items-center text-sm text-white/60 gap-4">
           <p>
             © {new Date().getFullYear()}{" "}
             <span className="text-orange-400 font-serif">SM IT Solution</span>.
