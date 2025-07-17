@@ -1,9 +1,10 @@
 import PriceCard from "../components/Pricing/PriceCard";
+import ContactForm from "../components/shared/ContactForm";
 import { plans } from "../utils/PricePlan";
 
 const Pricing = () => {
   return (
-    <div className="m-10 font-serif">
+    <div className="m-10">
       <h1 className="text-center text-xl sm:text-3xl font-bold">
         Choose Your <span className="text-orange-600">Perfect Plan</span>
       </h1>
@@ -24,6 +25,7 @@ const Pricing = () => {
           />
         ))}
       </div>
+      <ContactForm />
     </div>
   );
 };

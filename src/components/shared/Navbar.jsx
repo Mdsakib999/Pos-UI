@@ -1,23 +1,17 @@
 import { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full border-b border-gray-200 font-serif bg-white sticky top-0 z-50">
-      <div className="flex justify-between items-center px-4 py-4 h-20">
-        <h1 className="text-2xl sm:text-3xl font-extrabold cursor-pointer text-orange-600">
+    <div className="w-full shadow-b shadow-gray-200 border-b border-gray-200 sticky top-0 z-50 bg-white">
+      <div className="flex justify-between items-center px-4 py-4 h-20 max-w-7xl mx-auto">
+        {/* Logo */}
+        <h1 className="text-2xl sm:text-3xl font-extrabold cursor-pointer">
           POS
         </h1>
-        <button
-          className="sm:hidden text-3xl text-orange-600 cursor-pointer transition"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <HiX /> : <HiMenu />}
-        </button>
         <div className="hidden sm:flex gap-6 items-center">
           <NavLink
             to="/"
@@ -56,8 +50,29 @@ const Navbar = () => {
             Pricing
           </NavLink>
         </div>
-        <button className="hidden sm:flex cursor-pointer bg-orange-600 text-white hover:text-orange-600 hover:bg-white hover:border hover:border-orange-600 duration-300 rounded-md px-5 py-2 font-semibold">
+        <button
+          onClick={() => {
+            window.location.href = "/#contact";
+            setTimeout(() => {
+              const contactSection = document.getElementById("contact");
+              if (contactSection) {
+                contactSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }, 100);
+          }}
+          className="hidden sm:flex cursor-pointer bg-orange-600 text-white hover:text-orange-600 hover:bg-white hover:border hover:border-orange-600 duration-300 rounded-md px-5 py-2 font-semibold"
+        >
           Get a Demo
+        </button>
+        <button
+          className="sm:hidden text-3xl text-orange-600 cursor-pointer transition"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <HiX /> : <HiMenu />}
         </button>
       </div>
 
@@ -103,7 +118,19 @@ const Navbar = () => {
             Pricing
           </NavLink>
           <button
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              window.location.href = "/#contact";
+              setTimeout(() => {
+                const contactSection = document.getElementById("contact");
+                if (contactSection) {
+                  contactSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }
+              }, 100);
+            }}
             className="bg-orange-600 text-white hover:bg-orange-700 duration-300 rounded-md px-6 py-3 font-semibold text-base mt-4"
           >
             Get a Demo

@@ -1,5 +1,5 @@
 import { FaCloud, FaBolt, FaConnectdevelop } from "react-icons/fa";
-import howitwoksImg from "/assets/how-it-works.png";
+import howitwoks from "/assets/advideo.mp4";
 
 const features = [
   {
@@ -36,10 +36,14 @@ export const HowItWorks = () => {
       </p>
 
       <div className="mb-12">
-        <img
-          src={howitwoksImg}
-          alt="How POS works"
-          className="rounded-lg mx-auto"
+        <video
+          src={howitwoks}
+          autoPlay
+          loop
+          muted
+          controlsList="nodownload"
+          controls
+          className="w-full lg:w-1/2 h-full object-cover rounded-xl mx-auto"
         />
       </div>
 

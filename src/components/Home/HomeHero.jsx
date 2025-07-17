@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import pcimg from "/assets/PC.png";
+import pcimg from "/assets/Dashboard.png";
 
 export const Hero = () => {
   const companies = [
