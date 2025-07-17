@@ -87,7 +87,7 @@ export const OurServices = () => {
       >
         {services.map((service, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition h-[300px] flex flex-col justify-between mb-10">
+            <div className="bg-orange-50 rounded-xl p-6 shadow-sm hover:shadow-md transition h-[220px] flex flex-col justify-between mb-10">
               <div>
                 {service.icon}
                 <h4 className="text-lg font-semibold mt-4 mb-2">
