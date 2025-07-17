@@ -1,4 +1,5 @@
 import PriceCard from "../components/Pricing/PriceCard";
+import ContactForm from "../components/shared/ContactForm";
 import { plans } from "../utils/PricePlan";
 
 const Pricing = () => {
@@ -24,6 +25,7 @@ const Pricing = () => {
           />
         ))}
       </div>
+      <ContactForm />
     </div>
   );
 };
