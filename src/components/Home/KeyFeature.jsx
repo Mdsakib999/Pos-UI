@@ -1,6 +1,7 @@
 import salesmanagementImg from "/assets/salesmanagement.webp";
 import inventorymanagementImg from "/assets/inventorymanagement.png";
 import analytics from "/assets/analytics.png";
+import POSInterface from "./POSInterface";
 
 export const KeyFeature = () => {
   const menuItems = [
@@ -56,13 +57,11 @@ export const KeyFeature = () => {
         </div>
 
         {/* Right column with one tall card */}
-        <div className="lg:row-span-2 shadow-md p-6 rounded">
-          <div className="h-full flex flex-col justify-between space-y-3">
-            <img
-              src={menuItems[1].image}
-              alt={menuItems[1].title}
-              className="w-full h-full object-fit rounded-lg"
-            />
+        <div className="lg:row-span-2 p-2 rounded flex flex-col gap-4 max-h-[800px] shadow-md items-center">
+          <div className="flex-1 max-h-[800px] overflow-hidden">
+            <POSInterface />
+          </div>
+          <div>
             <h3 className="text-xl font-semibold">{menuItems[1].title}</h3>
             <p className="text-gray-600 text-sm">{menuItems[1].description}</p>
           </div>
