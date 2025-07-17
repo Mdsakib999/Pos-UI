@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +35,12 @@ const Navbar = () => {
     <div className="w-full shadow-b shadow-gray-200 border-b border-gray-200 sticky top-0 z-50 bg-white">
       <div className="flex justify-between items-center px-4 py-4 h-20 max-w-7xl mx-auto">
         {/* Logo */}
-        <h1 className="text-2xl sm:text-3xl font-extrabold cursor-pointer">
+        <Link
+          to="/"
+          className="text-2xl sm:text-3xl font-extrabold cursor-pointer text-orange-600"
+        >
           POS
-        </h1>
+        </Link>
         <div className="hidden sm:flex gap-6 items-center">
           {navigationItems.map((item) => (
             <NavLink
