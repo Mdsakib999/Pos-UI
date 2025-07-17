@@ -42,7 +42,6 @@ export const HowItWorks = () => {
           loop
           muted
           controlsList="nodownload"
-          controls
           className="w-full lg:w-1/2 h-full object-cover rounded-xl mx-auto"
         />
       </div>
